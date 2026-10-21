@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- Steel Trainee - Online Manual - (c) AEML, NTUST -->
+<html lang="zh-Hant" data-owner="AEML, NTUST">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="AEML, NTUST">
+<title>鋼鐵練習生 Steel Trainee 說明書 | AEML, NTUST</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1b1830;--gold:#ffc83d;--red:#ff5a4e;--blue:#3d8bff;--green:#3ccf6e;--purple:#8d5cff;--paper:#fffaf0;--bg:#eef3ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans TC",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+body[data-l=zh] .en{display:none} body[data-l=en] .zh{display:none} body[data-l=both] .en{display:block;color:#4a4766;font-size:.92em}
+body[data-l=both] span.en{display:inline}
+body[data-l=both] span.en::before{content:" · "}
+body[data-l=both] h2 span.en::before{content:""}
+body[data-l=both] h2 span.en{font-size:.7em;color:#6b6890}
+header{position:relative;color:#fff;padding:48px 20px 64px;text-align:center;background:linear-gradient(rgba(20,24,60,.55),rgba(20,24,60,.75)),url(assets/bg_village.webp) center/cover}
+header h1{font-family:"Lilita One","Noto Sans TC",sans-serif;font-size:clamp(34px,6vw,64px);margin:0;color:var(--gold);text-shadow:0 4px 0 var(--ink),2px 0 0 var(--ink),-2px 0 0 var(--ink)}
+header p{margin:8px 0 0;font-size:18px}
+.langs{position:sticky;top:0;z-index:5;display:flex;justify-content:center;gap:8px;padding:10px;background:rgba(27,24,48,.92)}
+.langs button,.btn{font-family:"Lilita One","Noto Sans TC",sans-serif;font-size:16px;padding:6px 16px;border:3px solid var(--ink);border-radius:12px;background:#fff;box-shadow:0 4px 0 var(--ink);cursor:pointer;color:var(--ink);text-decoration:none;display:inline-block}
+.langs button.on{background:var(--gold)}
+.btn.go{background:var(--green);color:#fff;text-shadow:0 2px 0 var(--ink)}
+main{max-width:1060px;margin:0 auto;padding:24px 16px 60px}
+nav.toc{background:var(--paper);border:4px solid var(--ink);border-radius:18px;box-shadow:0 6px 0 var(--ink);padding:16px 22px;margin:8px auto 28px;position:relative}
+nav.toc ol{columns:2;margin:6px 0 0;padding-left:22px}
+nav.toc a{color:var(--ink)}
+section{background:var(--paper);border:4px solid var(--ink);border-radius:18px;box-shadow:0 6px 0 var(--ink);padding:18px 24px;margin:0 0 26px}
+h2{font-family:"Lilita One","Noto Sans TC",sans-serif;font-size:28px;margin:0 0 8px;display:flex;align-items:center;gap:10px}
+h2 .n{background:var(--purple);color:#fff;border:3px solid var(--ink);border-radius:10px;padding:0 10px;font-size:20px}
+h3{margin:18px 0 6px}
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th,td{border:2px solid #d9d2c0;padding:6px 10px;text-align:left;vertical-align:top}
+th{background:#fff1c9}
+.kbd{display:inline-block;background:#fff;border:2px solid var(--ink);border-bottom-width:4px;border-radius:6px;padding:0 7px;font-family:Consolas,monospace;font-size:.9em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.card{background:#fff;border:3px solid var(--ink);border-radius:14px;padding:10px;text-align:center}
+.card img{height:150px;max-width:100%;object-fit:contain;filter:drop-shadow(0 4px 0 rgba(0,0,0,.25))}
+.card b{display:block;margin-top:4px}
+.card small{display:block;line-height:1.4}
+.tip{background:#e9e2ff;border-left:6px solid var(--purple);padding:8px 12px;border-radius:8px;margin:10px 0}
+.warn{background:#ffe3e0;border-left:6px solid var(--red);padding:8px 12px;border-radius:8px;margin:10px 0}
+svg text{font-family:Arial,sans-serif}
+footer{text-align:center;color:#555;padding:20px;font-size:14px}
+@media (max-width:640px){nav.toc ol{columns:1}section{padding:14px}}
+</style>
+</head>
+<body data-l="both">
+<header>
+  <h1>鋼鐵練習生<br><span style="font-size:.5em">Steel Trainee</span></h1>
+  <p style="font-size:24px;color:#7fe3ff;font-weight:900;margin-top:4px">鈦扯了吧！金屬英雄大亂鬥 · <span style="font-weight:700">Ti-tally Stretched! Metal Heroes Brawl</span></p>
+  <p class="zh">線上遊戲說明書 · 工程材料 CH.06 金屬的機械性質</p>
+  <p class="en">Online Game Manual · Engineering Materials Ch.06 Mechanical Properties of Metals</p>
+  <p style="margin-top:18px"><a class="btn go" href="index.html"><span class="zh">▶ 開始遊戲</span><span class="en">▶ Play Now</span></a></p>
+</header>
+<div class="langs"><button data-l="zh">中文</button><button data-l="both" class="on">中文/English</button><button data-l="en">English</button></div>
+<main>
+<nav class="toc"><b class="zh">目錄</b><b class="en">Contents</b>
+<ol>
+<li><a href="#s1"><span class="zh">遊戲簡介與教學目標</span><span class="en">Overview &amp; Learning Goals</span></a></li>
+<li><a href="#s2"><span class="zh">開始遊戲與流程</span><span class="en">Getting Started</span></a></li>
+<li><a href="#s3"><span class="zh">操作方式</span><span class="en">Controls</span></a></li>
+<li><a href="#s4"><span class="zh">血條＝應力–應變曲線</span><span class="en">Health = Stress–Strain Curve</span></a></li>
+<li><a href="#s5"><span class="zh">六位金屬英雄</span><span class="en">The Six Metal Heroes</span></a></li>
+<li><a href="#s6"><span class="zh">敵人：負載類型</span><span class="en">Enemies: Loading Modes</span></a></li>
+<li><a href="#s7"><span class="zh">題目箱與答題</span><span class="en">Question Boxes</span></a></li>
+<li><a href="#s8"><span class="zh">遊戲模式</span><span class="en">Game Modes</span></a></li>
+<li><a href="#s9"><span class="zh">設定選項</span><span class="en">Settings</span></a></li>
+<li><a href="#s10"><span class="zh">存檔與讀檔</span><span class="en">Save &amp; Load</span></a></li>
+<li><a href="#s11"><span class="zh">線上多人（1–4 人）</span><span class="en">Online Play (1–4)</span></a></li>
+<li><a href="#s12"><span class="zh">手機與平板</span><span class="en">Phones &amp; Tablets</span></a></li>
+<li><a href="#s13"><span class="zh">常見問題</span><span class="en">FAQ</span></a></li>
+</ol></nav>
+
+<section id="s1"><h2><span class="n">1</span><span class="zh">遊戲簡介與教學目標</span><span class="en">Overview &amp; Learning Goals</span></h2>
+<p class="zh">一場大雪後，纜車的一根鋼製吊桿伸長了 4%，而且回不去了。現場留下「幻影應變」的卡片。玩家扮演六位金屬英雄，沿著應力–應變曲線的六條線索調查真相。打倒敵人、打破題目箱並答對題目，就能收集寶石、破解案件。</p>
+<p class="en">After a blizzard, a cable-car steel hanger rod has stretched 4 % and won't spring back. A card from "Phantom Strain" was left at the scene. You play six metal heroes who follow six clues along the stress–strain curve. Defeat enemies, break question boxes and answer correctly to collect gems and crack each case.</p>
+<table><tr><th><span class="zh">本章學習目標</span><span class="en">Chapter goal</span></th><th><span class="zh">遊戲中的對應</span><span class="en">In the game</span></th></tr>
+<tr><td><span class="zh">工程應力與應變 σ = F/A₀、ε = Δl/l₀</span><span class="en">Engineering stress &amp; strain</span></td><td><span class="zh">CASE 01 計算題；受力時角色伸長</span><span class="en">CASE 01 calculations; heroes stretch when loaded</span></td></tr>
+<tr><td><span class="zh">彈性與塑性變形</span><span class="en">Elastic vs plastic deformation</span></td><td><span class="zh">血條在彈性區可完全恢復，超過降伏點就留下永久應變</span><span class="en">Health fully recovers in the elastic region; past yield, strain is permanent</span></td></tr>
+<tr><td><span class="zh">E、ν、G、K</span><span class="en">E, ν, G, K</span></td><td><span class="zh">E 越大擊退越小；被拉時身體變長變細（蒲松效應）</span><span class="en">Higher E = less knockback; stretched heroes get longer and thinner (Poisson effect)</span></td></tr>
+<tr><td><span class="zh">σy、TS、頸縮、延性、韌性</span><span class="en">σy, TS, necking, ductility, toughness</span></td><td><span class="zh">曲線上的三個區域；超過 TS 頸縮變慢；曲線下面積＝耐打程度</span><span class="en">Three regions on the curve; past TS you neck and slow down; area under the curve = toughness</span></td></tr>
+<tr><td><span class="zh">真應力與應變硬化</span><span class="en">True stress &amp; strain hardening</span></td><td><span class="zh">銅英雄越受傷攻擊越強（n ≈ 0.5）</span><span class="en">Copper hits harder as plastic strain grows (n ≈ 0.5)</span></td></tr>
+<tr><td><span class="zh">硬度試驗</span><span class="en">Hardness tests</span></td><td><span class="zh">鎢英雄的「維克氏壓痕」大招；CASE 06 題目</span><span class="en">Tungsten's "Vickers Indent" super; CASE 06 questions</span></td></tr>
+</table></section>
+
+<section id="s2"><h2><span class="n">2</span><span class="zh">開始遊戲與流程</span><span class="en">Getting Started</span></h2>
+<ol class="zh"><li>開啟遊戲後直接進入主選單（不另設標題頁）。手機或平板請先按右下角的「全螢幕」。</li><li>按「開始遊戲（劇情）」：播放約 45 秒的水彩風開場動畫（可按「跳過」）。</li><li>閱讀序章，選擇案件（需依序破解），再為每位玩家選英雄。</li><li>每個案件開始前會有劇情提示，接著進入戰鬥。</li><li>在時間內收集足夠寶石即可破案；CASE 06 需擊倒魔王「巨型橫梁機」。</li><li>結算畫面會列出答對率與需要複習的題目。</li></ol>
+<ol class="en"><li>The game opens straight to the main menu (no separate title page). On phones and tablets, tap "Fullscreen" first.</li><li>Press "Start Game (Story)": a ~45-second watercolor intro plays (you can skip it).</li><li>Read the prologue, pick a case (solve them in order), then choose a hero for each player.</li><li>A short story scene introduces each case, then the battle begins.</li><li>Collect enough gems before time runs out; in CASE 06 you must defeat the boss, The Great Crosshead.</li><li>The results screen shows your accuracy and the questions to review.</li></ol></section>
+
+<section id="s3"><h2><span class="n">3</span><span class="zh">操作方式</span><span class="en">Controls</span></h2>
+<table>
+<tr><th></th><th><span class="zh">移動</span><span class="en">Move</span></th><th><span class="zh">攻擊</span><span class="en">Attack</span></th><th><span class="zh">大招</span><span class="en">Super</span></th><th><span class="zh">瞄準</span><span class="en">Aim</span></th></tr>
+<tr><td><b>P1</b> <span class="zh">鍵盤＋滑鼠</span><span class="en">keyboard + mouse</span></td><td><span class="kbd">W</span><span class="kbd">A</span><span class="kbd">S</span><span class="kbd">D</span></td><td><span class="kbd">J</span> / <span class="zh">滑鼠左鍵</span><span class="en">left click</span></td><td><span class="kbd">K</span> / <span class="zh">滑鼠右鍵</span><span class="en">right click</span></td><td><span class="zh">滑鼠，或自動瞄準</span><span class="en">mouse, or auto-aim</span></td></tr>
+<tr><td><b>P2</b> <span class="zh">鍵盤</span><span class="en">keyboard</span></td><td><span class="kbd">↑</span><span class="kbd">←</span><span class="kbd">↓</span><span class="kbd">→</span></td><td><span class="kbd">/</span></td><td><span class="kbd">.</span></td><td><span class="zh">自動瞄準</span><span class="en">auto-aim</span></td></tr>
+<tr><td><b>P3–P4</b> <span class="zh">遊戲手把</span><span class="en">gamepad</span></td><td><span class="zh">左搖桿 / 十字鍵</span><span class="en">left stick / d-pad</span></td><td>A / RT</td><td>B / LT</td><td><span class="zh">右搖桿</span><span class="en">right stick</span></td></tr>
+<tr><td><b><span class="zh">觸控</span><span class="en">Touch</span></b></td><td><span class="zh">左下虛擬搖桿</span><span class="en">left virtual stick</span></td><td><span class="zh">✊ 按住；拖曳可瞄準</span><span class="en">hold ✊; drag to aim</span></td><td><span class="zh">★ 放開施放；拖曳可瞄準</span><span class="en">release ★; drag to aim</span></td><td><span class="zh">自動或拖曳</span><span class="en">auto or drag</span></td></tr>
+</table>
+<p class="zh">暫停：<span class="kbd">P</span> 或 <span class="kbd">Esc</span>、手把 Start、右上角 Ⅱ 鍵。答題時可按 <span class="kbd">1</span>–<span class="kbd">4</span>。按鍵可在「設定 → 自訂按鍵」修改。若只有 1–2 位玩家，P1、P2 也可以使用第 1、2 支手把。</p>
+<p class="en">Pause: <span class="kbd">P</span> or <span class="kbd">Esc</span>, gamepad Start, or the Ⅱ button. In a quiz press <span class="kbd">1</span>–<span class="kbd">4</span>. Change keys in Settings → Key Bindings. With 1–2 players, P1 and P2 can also use gamepads 1 and 2.</p></section>
+
+<section id="s4"><h2><span class="n">4</span><span class="zh">血條＝應力–應變曲線</span><span class="en">Health = Stress–Strain Curve</span></h2>
+<svg viewBox="0 0 640 260" width="100%" style="max-width:640px;background:#fff;border:3px solid #1b1830;border-radius:12px">
+<rect x="50" y="20" width="150" height="200" fill="#3ccf6e" opacity=".18"/><rect x="200" y="20" width="260" height="200" fill="#ffc83d" opacity=".2"/><rect x="460" y="20" width="150" height="200" fill="#ff5a4e" opacity=".18"/>
+<path d="M50 220 L200 120 Q330 55 460 48 Q540 50 610 80" fill="none" stroke="#1b1830" stroke-width="4"/>
+<line x1="380" y1="52" x2="290" y2="220" stroke="#8d5cff" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="380" cy="52" r="8" fill="#ff2d2d" stroke="#fff" stroke-width="3"/>
+<text x="60" y="40" font-size="15" font-weight="bold">σ</text><text x="595" y="240" font-size="15" font-weight="bold">ε</text>
+<text x="90" y="200" font-size="13">ELASTIC</text><text x="270" y="200" font-size="13">PLASTIC</text><text x="490" y="200" font-size="13">NECKING</text>
+<text x="190" y="112" font-size="13" font-weight="bold">σy</text><text x="450" y="40" font-size="13" font-weight="bold">TS</text><text x="600" y="72" font-size="13" font-weight="bold">✖</text>
+<text x="230" y="238" font-size="13" fill="#8d5cff">εp</text>
+</svg>
+<ul class="zh"><li><b>綠色彈性區</b>：受傷後休息約 2 秒，變形會完全恢復（彈性 = 可逆）。</li><li><b>黃色塑性區</b>：超過降伏強度 σy，原子面滑移，紫色的塑性應變 εp 永久留下。卸載線（虛線）平行於彈性段，斜率為 E。</li><li><b>紅色頸縮區</b>：超過抗拉強度 TS，開始頸縮，移動變慢。</li><li><b>✖ 斷裂</b>：倒下並掉落 1 顆寶石，4 秒後換一根全新試體重新上場。</li><li>答對題目＝<b>退火</b>，消除部分塑性應變；紅色藥水也有同樣效果。</li></ul>
+<ul class="en"><li><b>Green elastic region</b>: rest about 2 s and the deformation fully recovers (elastic = reversible).</li><li><b>Yellow plastic region</b>: past σy, atomic planes slip and the purple plastic strain εp stays. The unloading line (dashed) is parallel to the elastic slope E.</li><li><b>Red necking region</b>: past TS you neck and move slower.</li><li><b>✖ Fracture</b>: you go down, drop 1 gem, and respawn 4 s later as a fresh specimen.</li><li>A correct answer = <b>annealing</b>: it removes part of your plastic strain. Red potions do the same.</li></ul></section>
+
+<section id="s5"><h2><span class="n">5</span><span class="zh">六位金屬英雄</span><span class="en">The Six Metal Heroes</span></h2>
+<div class="grid">
+<div class="card"><img src="assets/h_steel.webp" alt=""><b><span class="zh">鋼鐵史提爾</span><span class="en">Sterling Steel</span></b><small>E 207 GPa · σy 250 · TS 420 · %EL 25</small><small class="zh">均衡型；大招「0.2% 偏移線」鋼樑牆定身敵人</small><small class="en">All-rounder; super "0.2 % Offset Line" freezes enemies</small></div>
+<div class="card"><img src="assets/h_aluminum.webp" alt=""><b><span class="zh">疾風艾爾</span><span class="en">Zip Al</span></b><small>E 69 GPa · σy 35 · TS 90 · %EL 40</small><small class="zh">速度型；E 低，被打飛很遠；大招「順風衝刺」</small><small class="en">Speedster; low E means big knockback; super "Tailwind Dash"</small></div>
+<div class="card"><img src="assets/h_copper.webp" alt=""><b><span class="zh">銅銅潘妮</span><span class="en">Penny Copper</span></b><small>E 110 GPa · σy 69 · TS 200 · n ≈ 0.5</small><small class="zh">應變硬化：塑性應變越大，鞭擊越強</small><small class="en">Strain hardening: more plastic strain, stronger whip</small></div>
+<div class="card"><img src="assets/h_titanium.webp" alt=""><b><span class="zh">鈦空蒂雅</span><span class="en">Tia Titanium</span></b><small>E 107 GPa · σy 450 · TS 520</small><small class="zh">比強度最高；大招「噴射突擊」</small><small class="en">Best strength-to-weight; super "Jet Strike"</small></div>
+<div class="card"><img src="assets/h_tungsten.webp" alt=""><b><span class="zh">鎢鋼巨人湯克</span><span class="en">Tunk Tungsten</span></b><small>E 407 GPa · σy 1500 · %EL ≈ 2</small><small class="zh">超硬但脆：一過降伏很快斷裂；大招「維克氏壓痕」</small><small class="en">Very stiff but brittle; super "Vickers Indent"</small></div>
+<div class="card"><img src="assets/h_castiron.webp" alt=""><b><span class="zh">鑄鐵大廚</span><span class="en">Chef Skillet</span></b><small>E ≈ 100 GPa · σy 200 · brittle</small><small class="zh">抗壓強（壓縮傷害減半）、怕拉伸（拉力傷害加倍）</small><small class="en">Strong in compression (½ dmg), weak in tension (2× dmg)</small></div>
+</div>
+<p class="tip zh">大招充能：造成傷害可慢慢充能，答對題目一次充 50%。</p><p class="tip en">Super charge: dealing damage charges it slowly; each correct answer adds 50 %.</p></section>
+
+<section id="s6"><h2><span class="n">6</span><span class="zh">敵人：負載類型</span><span class="en">Enemies: Loading Modes</span></h2>
+<div class="grid">
+<div class="card"><img src="assets/e_tentacle.webp" alt=""><b><span class="zh">拉力章魚</span><span class="en">Tension Tentacle</span></b><small class="zh">抓住英雄往回拉（拉伸）。打它 18 點傷害可掙脫。</small><small class="en">Grabs and pulls you (tension). Deal 18 damage to break free.</small></div>
+<div class="card"><img src="assets/e_boulder.webp" alt=""><b><span class="zh">壓縮岩怪</span><span class="en">Compression Boulder</span></b><small class="zh">跳起重壓地面（壓縮），看陰影閃避。</small><small class="en">Jumps and slams (compression). Watch the shadow.</small></div>
+<div class="card"><img src="assets/e_shear.webp" alt=""><b><span class="zh">剪刀怪</span><span class="en">Shear Blade</span></b><small class="zh">蓄力後直線衝刺（剪力 τ = F/A₀）。</small><small class="en">Winds up, then dashes (shear τ = F/A₀).</small></div>
+<div class="card"><img src="assets/e_twister.webp" alt=""><b><span class="zh">扭力旋風</span><span class="en">Torsion Twister</span></b><small class="zh">環繞並發射旋風（扭轉），被打中方向會亂轉。</small><small class="en">Circles and shoots whirls (torsion); hits scramble your direction.</small></div>
+<div class="card"><img src="assets/e_boss.webp" alt=""><b><span class="zh">巨型橫梁機</span><span class="en">The Great Crosshead</span></b><small class="zh">CASE 06 魔王：把全員往上拉、發出壓縮震波、召喚手下。答對題目可造成 8% 爆擊。</small><small class="en">CASE 06 boss: pulls everyone, sends compression quakes, summons minions. Correct answers deal 8 % critical damage.</small></div>
+</div></section>
+
+<section id="s7"><h2><span class="n">7</span><span class="zh">題目箱與答題</span><span class="en">Question Boxes</span></h2>
+<p class="zh">金色「?」題目箱約每 7–10 秒出現（最多 2 個），打 3 下即可開啟。題目依案件出題（共 60 題，涵蓋 §6.2–6.10 與課本例題 6.1–6.5），每題 30 秒。</p>
+<p class="en">Golden "?" boxes appear every 7–10 s (max 2); hit one 3 times to open it. Questions follow the case (60 in total, covering §6.2–6.10 and Examples 6.1–6.5). You have 30 s per question.</p>
+<table><tr><th></th><th><span class="zh">答對</span><span class="en">Correct</span></th><th><span class="zh">答錯 / 超時</span><span class="en">Wrong / time-out</span></th></tr>
+<tr><td><span class="zh">效果</span><span class="en">Effect</span></td><td><span class="zh">+2 寶石（魔王戰改為 8% 爆擊）、大招 +50%、退火消除塑性應變、+100 分</span><span class="en">+2 gems (8 % boss crit in CASE 06), +50 % super, annealing, +100 points</span></td><td><span class="zh">顯示正確答案與解析；這題稍後會再出現</span><span class="en">Shows the answer and explanation; the question returns later</span></td></tr></table>
+<p class="warn zh">單機多人時，答題期間遊戲會暫停；連線時只有答題的玩家會暫時離場（無敵狀態）。</p><p class="warn en">In local multiplayer the game pauses during a quiz; online, only the answering player steps out (invulnerable).</p></section>
+
+<section id="s8"><h2><span class="n">8</span><span class="zh">遊戲模式</span><span class="en">Game Modes</span></h2>
+<table><tr><th><span class="zh">模式</span><span class="en">Mode</span></th><th><span class="zh">說明</span><span class="en">Description</span></th></tr>
+<tr><td><span class="zh">劇情模式</span><span class="en">Story</span></td><td><span class="zh">CASE 01–06 依序解鎖；1–4 人同機合作。</span><span class="en">CASE 01–06 unlock in order; 1–4 players co-op on one device.</span></td></tr>
+<tr><td><span class="zh">自由對戰</span><span class="en">Free Battle</span></td><td><span class="zh">自選場地（雪地纜車站／月夜試驗室）、題目範圍（全部或單一案件）與人數。</span><span class="en">Choose the arena (Snowy Cable-Car Station / Moonlit Test Lab), question range (all or one case) and players.</span></td></tr>
+<tr><td><span class="zh">連線遊戲</span><span class="en">Online</span></td><td><span class="zh">最多 4 台裝置透過中繼伺服器合作，見第 11 節。</span><span class="en">Up to 4 devices co-op via a relay server; see section 11.</span></td></tr></table></section>
+
+<section id="s9"><h2><span class="n">9</span><span class="zh">設定選項</span><span class="en">Settings</span></h2>
+<table><tr><th><span class="zh">項目</span><span class="en">Option</span></th><th><span class="zh">選項（預設）</span><span class="en">Choices (default)</span></th></tr>
+<tr><td><span class="zh">語言</span><span class="en">Language</span></td><td><span class="zh">中文／<b>中文/English</b>／English</span><span class="en">中文 / <b>中文/English</b> / English</span></td></tr>
+<tr><td><span class="zh">背景音樂</span><span class="en">Background music</span></td><td><span class="zh">開啟／<b>關閉</b>。開啟後依場景切換：日常與溫馨（選單、出陣準備）、學術與典雅（搜查路線圖、劇情、開場）、奇幻與戰鬥（戰鬥、魔王、破案）。原創曲共 10 首，每首 8 個樂器音軌＋1 個獨立鼓組音軌，立體聲。「曲目」分頁列出全部歌曲，可試聽，也可固定播放某一首。</span><span class="en">On / <b>Off</b>. Changes with the scene: everyday & warm (menus, squad setup), academic & elegant (case map, story, intro), fantasy & battle (fights, boss, victory). 10 original tracks, each with 8 instrument tracks + 1 drum track, in stereo. The "Tracks" tab lists every song so you can preview it or always play one.</span></td></tr>
+<tr><td><span class="zh">音效</span><span class="en">Sound effects</span></td><td><span class="zh"><b>開啟</b>／關閉</span><span class="en"><b>On</b> / Off</span></td></tr>
+<tr><td><span class="zh">音量</span><span class="en">Volume</span></td><td><span class="zh">主音量、音樂、音效三個滑桿</span><span class="en">Master, music and SFX sliders</span></td></tr>
+<tr><td><span class="zh">全螢幕</span><span class="en">Fullscreen</span></td><td><span class="zh">開啟／<b>關閉</b>（主選單右下角與右上角也有按鈕）</span><span class="en">On / <b>Off</b> (also buttons on the menu and top-right)</span></td></tr>
+<tr><td><span class="zh">繪圖</span><span class="en">Renderer</span></td><td><span class="zh"><b>WebGPU 硬體</b>／軟體。不支援 WebGPU 的裝置會自動改用軟體。</span><span class="en"><b>WebGPU hardware</b> / Software. Falls back to software automatically if WebGPU is unavailable.</span></td></tr>
+<tr><td><span class="zh">畫質</span><span class="en">Quality</span></td><td><span class="zh"><b>流暢</b>（1280×720）／標準（1920×1080）／高（2560×1440，2K）</span><span class="en"><b>Smooth</b> (1280×720) / Standard (1920×1080) / High (2560×1440, 2K)</span></td></tr>
+<tr><td><span class="zh">重新開始、暫停</span><span class="en">Restart, Pause</span></td><td><span class="zh">在暫停選單或設定「一般」分頁</span><span class="en">In the pause menu or Settings → General</span></td></tr>
+<tr><td><span class="zh">螢幕搖桿</span><span class="en">On-screen joystick</span></td><td><span class="zh">開啟／<b>關閉</b>。觸控裝置第一次點擊時會詢問是否開啟。</span><span class="en">On / <b>Off</b>. Touch devices are asked on first tap.</span></td></tr>
+<tr><td><span class="zh">自訂按鍵</span><span class="en">Key bindings</span></td><td><span class="zh">P1、P2 的上下左右、攻擊、大招</span><span class="en">Up/down/left/right, attack, super for P1 and P2</span></td></tr>
+<tr><td><span class="zh">劇情提示</span><span class="en">Story hints</span></td><td><span class="zh"><b>開啟</b>／關閉（關閉後略過劇情對話與教學提示）</span><span class="en"><b>On</b> / Off (Off skips story scenes and tips)</span></td></tr>
+<tr><td><span class="zh">遊戲人數</span><span class="en">Players</span></td><td><span class="zh"><b>1</b>–4（出陣準備中可把座位設為 本機／電腦／線上）</span><span class="en"><b>1</b>–4 (in Squad Setup each seat can be Local / CPU / Online)</span></td></tr>
+<tr><td><span class="zh">連線</span><span class="en">Network</span></td><td><span class="zh">中繼伺服器網址（預設為 AEML Cloudflare 中繼）</span><span class="en">Relay server URL (defaults to the AEML Cloudflare relay)</span></td></tr></table></section>
+
+<section id="s10"><h2><span class="n">10</span><span class="zh">存檔與讀檔</span><span class="en">Save &amp; Load</span></h2>
+<p class="zh">進度（已破解案件、英雄選擇、每題答對紀錄）會自動保存在瀏覽器。另有 3 個存檔欄位，適合多人共用一台電腦。「匯出存檔碼」可把進度複製到另一台裝置，再用「匯入存檔碼」讀回。</p>
+<p class="en">Progress (solved cases, hero choices, per-question records) is saved automatically in the browser. There are also 3 save slots for shared computers. "Export Code" copies your progress so you can "Import Code" on another device.</p></section>
+
+<section id="s11"><h2><span class="n">11</span><span class="zh">線上多人（1–4 人）</span><span class="en">Online Play (1–4)</span></h2>
+<p class="zh">連線使用 AEML 的 Cloudflare 中繼伺服器（與 Wii 模擬器、晶界斬鬼錄相同），不需另外架設。</p>
+<p class="en">Online play uses the AEML Cloudflare relay (the same one as the Wii emulator and the Ch.04 game); nothing else needs to be set up.</p>
+<ol class="zh"><li><b>房主</b>：主選單 →「線上多人」→ 出陣準備自動開房，畫面出現 6 碼房號、連結與 QR code。</li><li>把座位設為「線上」（點座位右上角的標籤可切換 本機／電腦／線上）。</li><li><b>其他玩家</b>：開啟同一篇文章，掃 QR code 或點連結（網址帶 <code>#ssbroom=房號</code> 會自動加入）；也可以按「加入 (Relay)」輸入房號，再選自己的英雄。</li><li>人齊後房主按「出發！」。沒人加入的線上座位由電腦代打。</li><li>線上玩家斷線時由電腦暫代；重新整理同一分頁即可回到原座位。</li></ol>
+<ol class="en"><li><b>Host</b>: Main menu → "Online" → the squad setup opens a room and shows a 6-character code, a link and a QR code.</li><li>Set seats to "Online" (tap the tag on a seat to switch Local / CPU / Online).</li><li><b>Other players</b>: open the same post and scan the QR code or open the link (a URL with <code>#ssbroom=CODE</code> joins automatically), or press "Join (Relay)" and type the code, then pick a hero.</li><li>When everyone is in, the host presses "Let's Go!". Empty online seats are played by the CPU.</li><li>If an online player drops, the CPU takes over; reloading the same tab returns them to their seat.</li></ol>
+<p class="tip zh">本機也可以加入「電腦」隊友：在出陣準備把座位切換成「電腦」。電腦隊友打開的題目箱，會交給最近的玩家作答。</p>
+<p class="tip en">You can add CPU team-mates locally too: switch a seat to "CPU". Boxes opened by a CPU are answered by the nearest human player.</p></section>
+
+<section id="s12"><h2><span class="n">12</span><span class="zh">手機與平板</span><span class="en">Phones &amp; Tablets</span></h2>
+<p class="zh">遊戲嵌在文章中，請先按「全螢幕」並橫向持握。支援全螢幕的瀏覽器會進入真正的全螢幕；iPhone Safari 不支援元素全螢幕，會改用「填滿視窗」模式蓋住整個可見畫面。全螢幕時畫面固定為 16:9，不會捲動、放大或縮小。螢幕搖桿浮在左右兩側的黑邊上，不擋住遊戲畫面：左下移動，✊ 攻擊，★ 大招，Ⅱ 暫停。若畫面卡頓，請把畫質設為「流暢」或繪圖改為「軟體」。</p>
+<p class="en">The game sits inside the post: tap "Fullscreen" and hold the device in landscape. Browsers with element full screen use it; iPhone Safari, which does not support it, switches to a "fill the window" mode that covers the visible screen. In full screen the 16:9 picture is fixed and cannot scroll or zoom. The on-screen controller floats over the black side bars so it does not cover the battle: bottom-left to move, ✊ attack, ★ super, Ⅱ pause. If it stutters, set Quality to "Smooth" or Renderer to "Software".</p></section>
+
+<section id="s13"><h2><span class="n">13</span><span class="zh">常見問題</span><span class="en">FAQ</span></h2>
+<h3 class="zh">為什麼沒有音樂？</h3><h3 class="en">Why is there no music?</h3>
+<p class="zh">背景音樂預設為關閉，請到「設定 → 音訊」開啟。</p><p class="en">Music is off by default; turn it on in Settings → Audio.</p>
+<h3 class="zh">畫面出現「此版本已被修改」？</h3><h3 class="en">"This copy has been modified"?</h3>
+<p class="zh">遊戲偵測到程式碼被改動。請使用 AEML, NTUST 發布的原始版本。</p><p class="en">The game detected changed code. Please use the original release from AEML, NTUST.</p>
+</section>
+</main>
+<footer>鋼鐵練習生 Steel Trainee · CT3309301 Engineering Materials · © AEML, NTUST — National Taiwan University of Science and Technology<br>Art: hand-drawn pixel art generated with OpenArt · GPT Image 2.5 · Music: original compositions synthesized in the browser</footer>
+<script>
+(function(){var b=document.body,s;try{s=localStorage.getItem('aeml_ssb_manual_lang')}catch(e){}if(s)set(s);
+function set(l){b.setAttribute('data-l',l);document.querySelectorAll('.langs button').forEach(function(x){x.className=x.getAttribute('data-l')===l?'on':''});try{localStorage.setItem('aeml_ssb_manual_lang',l)}catch(e){}}
+document.querySelectorAll('.langs button').forEach(function(x){x.onclick=function(){set(x.getAttribute('data-l'))}});})();
+</script>
+</body>
+</html>
